@@ -111,6 +111,49 @@ fn discovers_installed_languages() {
 }
 
 #[test]
+fn control_center_input_catalogs_resolve_page_keys() {
+    let catalogs = PathBuf::from(env!("CARGO_MANIFEST_DIR")).join("locales");
+    let keys = [
+        "control_center.mouse_touchpad",
+        "control_center.input_mouse",
+        "control_center.input_touchpad",
+        "control_center.input_pointer_speed",
+        "control_center.input_acceleration",
+        "control_center.input_acceleration_adaptive",
+        "control_center.input_acceleration_flat",
+        "control_center.input_natural_scrolling",
+        "control_center.input_scroll_speed",
+        "control_center.input_left_handed",
+        "control_center.input_tap_to_click",
+        "control_center.input_tap_and_drag",
+        "control_center.input_two_finger_right_click",
+        "control_center.input_disable_while_typing",
+        "control_center.input_hardware_mouse",
+        "control_center.input_hardware_device",
+        "control_center.input_hardware_device_unknown",
+        "control_center.input_hardware_profile",
+        "control_center.input_hardware_profile_number",
+        "control_center.input_hardware_dpi",
+        "control_center.input_hardware_dpi_unit",
+        "control_center.input_hardware_polling_rate",
+        "control_center.input_hardware_polling_unit",
+        "control_center.input_hardware_applying",
+        "control_center.input_hardware_apply_failed",
+        "control_center.input_applied",
+        "control_center.input_apply_failed",
+        "control_center.input_applying",
+        "control_center.input_loading",
+    ];
+
+    for locale in ["en-US", "pt-BR", "zz-ZZ"] {
+        let catalog = I18n::from_locale(&catalogs, locale, "control-center").unwrap();
+        for key in keys {
+            assert_ne!(catalog.tr(key), key, "unresolved {key} for {locale}");
+        }
+    }
+}
+
+#[test]
 fn lc_all_has_priority_over_other_locale_variables() {
     let _guard = env_lock().lock().unwrap();
     let root = root();
