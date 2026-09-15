@@ -29,7 +29,7 @@
   "theme.family.light_veil": "ARGVUS Light Veil >",
   "theme.model.normal": "Normal",
   "theme.model.float": "Float",
-  "theme.applying": "Applying ARGVUS theme...",
+  "theme.applying": "Applying theme, please wait...",
   "theme.directory_missing": "Theme directory not found: {path}",
   "theme.reload_failed": "Global session reload failed after theme application.",
   "theme.wallpaper_missing": "Wallpaper not found: {path}",

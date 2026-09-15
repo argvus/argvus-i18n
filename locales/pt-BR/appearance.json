@@ -29,7 +29,7 @@
   "theme.family.light_veil": "ARGVUS Veil claro >",
   "theme.model.normal": "Normal",
   "theme.model.float": "Flutuante",
-  "theme.applying": "Aplicando o tema ARGVUS...",
+  "theme.applying": "Aplicando o tema, aguarde...",
   "theme.directory_missing": "Diretório do tema não encontrado: {path}",
   "theme.reload_failed": "Falha ao recarregar a sessão após aplicar o tema.",
   "theme.wallpaper_missing": "Papel de parede não encontrado: {path}",
