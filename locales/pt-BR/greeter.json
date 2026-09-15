@@ -1,1 +1,23 @@
-{"login":"Entrar","password":"Senha","authentication_failed":"Autenticação falhou"}
+{
+  "title": "Argvus Greeter",
+  "login": "Entrar",
+  "password": "Senha",
+  "authentication_failed": "Falha na autenticação",
+  "no_active_auth_prompt": "Nenhuma solicitação de autenticação ativa.",
+  "greetd_socket_missing": "GREETD_SOCK não está definido.",
+  "authentication_requested_after_session": "O greetd solicitou autenticação após iniciar a sessão.",
+  "internal_channel_unavailable": "O canal interno do greeter está indisponível.",
+  "login_service_unavailable": "Não foi possível conectar ao serviço de login.",
+  "no_login_user": "Nenhum usuário de login está disponível.",
+  "no_wayland_session": "Nenhuma sessão Wayland está disponível.",
+  "starting_authentication": "Iniciando autenticação...",
+  "starting_session": "Iniciando sessão...",
+  "session_started": "Sessão iniciada.",
+  "no_local_login_users": "Nenhum usuário local de login foi encontrado.",
+  "no_wayland_sessions": "Nenhuma sessão Wayland foi encontrada.",
+  "date_format": "%a, %d de %B",
+  "power": "Energia",
+  "power.shutdown": "Desligar",
+  "power.restart": "Reiniciar",
+  "power.suspend": "Suspender"
+}

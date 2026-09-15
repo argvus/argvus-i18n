@@ -4,6 +4,71 @@ use std::{
     path::{Path, PathBuf},
 };
 
+/// Compatibility handle for consumers that keep the selected translator in
+/// their application state. The locale and catalog loading remain entirely
+/// owned by [`I18n`].
+#[derive(Debug, Clone, Copy, PartialEq, Eq)]
+pub struct Lang(&'static I18n);
+
+impl Lang {
+    pub fn detect() -> Self {
+        Self(Box::leak(Box::new(
+            I18n::new("control-center").expect("control-center i18n catalog is required"),
+        )))
+    }
+
+    pub fn for_locale(locale: &str) -> Self {
+        let root = env::var_os("ARGVUS_I18N_DIR")
+            .map(PathBuf::from)
+            .unwrap_or_else(|| SYSTEM_CATALOG_DIR.into());
+        Self(Box::leak(Box::new(
+            I18n::from_locale(&root, locale, "control-center")
+                .expect("control-center i18n catalog is required"),
+        )))
+    }
+
+    pub fn translator(self) -> std::sync::Arc<I18n> {
+        std::sync::Arc::new(self.0.clone())
+    }
+
+    pub fn locale(self) -> String {
+        self.0.locale().to_owned()
+    }
+
+    pub fn tr(self, key: &str) -> String {
+        self.0.tr(key)
+    }
+
+    pub fn tr_args<I, K, V>(self, key: &str, args: I) -> String
+    where
+        I: IntoIterator<Item = (K, V)>,
+        K: AsRef<str>,
+        V: AsRef<str>,
+    {
+        self.0.tr_args(key, args)
+    }
+}
+
+pub fn tr(lang: Lang, key: &str) -> &'static str {
+    use std::sync::{OnceLock, RwLock};
+    static CACHE: OnceLock<RwLock<HashMap<(String, String), &'static str>>> = OnceLock::new();
+    let cache = CACHE.get_or_init(|| RwLock::new(HashMap::new()));
+    let cache_key = (lang.0.locale().to_owned(), key.to_owned());
+    if let Some(value) = cache.read().expect("i18n cache poisoned").get(&cache_key) {
+        return value;
+    }
+    let value: &'static str = Box::leak(lang.0.tr(key).into_boxed_str());
+    cache
+        .write()
+        .expect("i18n cache poisoned")
+        .insert(cache_key, value);
+    value
+}
+
+pub fn na(lang: Lang) -> &'static str {
+    tr(lang, "control_center.not_available")
+}
+
 pub const FALLBACK_LOCALE: &str = "en-US";
 pub const SYSTEM_CATALOG_DIR: &str = "/usr/share/argvus/i18n";
 
@@ -46,7 +111,10 @@ impl std::error::Error for I18nError {}
 
 impl I18n {
     pub fn new(domain: &str) -> Result<Self, I18nError> {
-        Self::from_root(Path::new(SYSTEM_CATALOG_DIR), domain)
+        let root = env::var_os("ARGVUS_I18N_DIR")
+            .map(PathBuf::from)
+            .unwrap_or_else(|| SYSTEM_CATALOG_DIR.into());
+        Self::from_root(&root, domain)
     }
 
     pub fn from_root(root: &Path, domain: &str) -> Result<Self, I18nError> {

@@ -1,1 +1,6 @@
-{"saved":"Changes saved","failed":"Operation failed","operation_failed":"Operation failed"}
+{
+  "saved": "Changes saved",
+  "failed": "Operation failed",
+  "operation_failed": "Operation failed",
+  "error_title": "Error"
+}
