@@ -205,10 +205,10 @@ pub fn validate_catalogs(root: &Path, requested: Option<&str>) -> Result<(), Vec
                 errors.push(format!("{locale}/{domain}: extra key {key}"));
             }
             for (key, value) in expected {
-                if let Some(translated) = actual.get(key) {
-                    if placeholders(value) != placeholders(translated) {
-                        errors.push(format!("{locale}/{domain}: placeholder mismatch for {key}"));
-                    }
+                if let Some(translated) = actual.get(key)
+                    && placeholders(value) != placeholders(translated)
+                {
+                    errors.push(format!("{locale}/{domain}: placeholder mismatch for {key}"));
                 }
             }
         }

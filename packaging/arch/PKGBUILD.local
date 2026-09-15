@@ -1,0 +1,47 @@
+# Maintainer: William C. Canin
+pkgbase=argvus-i18n
+pkgver=0.1.0
+pkgrel=1
+pkgdesc="Shared internationalization infrastructure and language packs for ARGVUS"
+arch=('x86_64')
+url="https://github.com/argvus/argvus-i18n"
+license=('GPL-3.0-only')
+makedepends=('cargo')
+options=('!debug')
+pkgname=('argvus-i18n' 'argvus-language-en-us' 'argvus-language-pt-br')
+source=("${pkgname}-${pkgver}.tar.gz")
+sha256sums=('SKIP')
+
+prepare() {
+  cd "$srcdir/$pkgbase-$pkgver"
+  cargo fetch --locked --target "$CARCH-unknown-linux-gnu"
+}
+
+build() {
+  cd "$srcdir/$pkgbase-$pkgver"
+  cargo build --release --locked
+}
+
+check() {
+  cd "$srcdir/$pkgbase-$pkgver"
+  cargo test --locked
+  ARGVUS_I18N_DIR="$PWD/locales" cargo run --release --locked -- validate
+}
+
+package_argvus-i18n() {
+  cd "$srcdir/$pkgbase-$pkgver"
+  make DESTDIR="$pkgdir" PREFIX=/usr install-core
+  depends=('argvus-language-en-us')
+}
+
+package_argvus-language-en-us() {
+  cd "$srcdir/$pkgbase-$pkgver"
+  install -dm755 "$pkgdir/usr/share/argvus/i18n/en-US"
+  install -m644 locales/en-US/*.json "$pkgdir/usr/share/argvus/i18n/en-US/"
+}
+
+package_argvus-language-pt-br() {
+  cd "$srcdir/$pkgbase-$pkgver"
+  install -dm755 "$pkgdir/usr/share/argvus/i18n/pt-BR"
+  install -m644 locales/pt-BR/*.json "$pkgdir/usr/share/argvus/i18n/pt-BR/"
+}

@@ -1,0 +1,5 @@
+{
+  "search.application": "Pesquisar aplicação",
+  "search.cheatsheet": "Procurar",
+  "error.config_value_required": "argvus-launcher: --config exige um valor"
+}
