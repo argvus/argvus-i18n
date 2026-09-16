@@ -1,86 +1,77 @@
-PREFIX ?= /usr
-DESTDIR ?=
-INSTALL ?= install
-RM ?= rm -f
-CARGO ?= cargo
-QML_IMPORT_DIR ?= $(PREFIX)/lib/qt6/qml
-
-BIN_NAME := argvus-i18n
-BIN := target/release/$(BIN_NAME)
+.PHONY: help build package pkg rust-build release install install-package clean \
+	validate lint fmt fmt-check clippy test tests check audit deny machete changelog
 
 .DEFAULT_GOAL := help
 
-.PHONY: help build build-bin check lint fmt fmt-check validate validate-pkgbuild install install-core install-locales uninstall reinstall clean
-
 help:
 	@echo "Available targets:"
-	@echo "  make build"
-	@echo "  make build-bin"
-	@echo "  make check"
-	@echo "  make fmt"
-	@echo "  make fmt-check"
-	@echo "  make validate"
-	@echo "  make validate-pkgbuild"
-	@echo "  make install"
-	@echo "  make install-core"
-	@echo "  make install-locales"
-	@echo "  make uninstall"
-	@echo "  make reinstall"
-	@echo "  make clean"
+	@echo "  make build           - validate and create the local Arch package"
+	@echo "  make rust-build      - build the Rust workspace in debug mode"
+	@echo "  make release         - build the Rust workspace in release mode"
+	@echo "  make package         - create the package in build/dist/"
+	@echo "  make install         - install the locally built package (sudo pacman -U)"
+	@echo "  make clean           - remove build/ and cargo outputs"
+	@echo "  make validate        - validate scripts and PKGBUILD metadata"
+	@echo "  make check           - run formatting, lint and Rust tests"
+	@echo "  make changelog       - regenerate CHANGELOG.md with git-cliff"
 
-build:
-	@tools/build-local-package.sh
-
-build-bin:
-	$(CARGO) build --release --locked
-
-check:
-	$(CARGO) clippy --locked --all-targets --all-features -- -D warnings
-	$(CARGO) test --locked
-
-lint: check
+lint:
+	@shellcheck tools/sh/pkgbuild_local.sh
+	@echo "Lint Shell Script OK"
 
 fmt:
-	$(CARGO) fmt
+	@cargo fmt --all
 
 fmt-check:
-	$(CARGO) fmt --check
+	@cargo fmt --all -- --check
 
-validate: fmt-check check validate-pkgbuild
-	ARGVUS_I18N_DIR="$(CURDIR)/locales" $(CARGO) run --release --locked -- validate
+clippy:
+	@cargo clippy --workspace --all-targets --all-features -- -D warnings
 
-validate-pkgbuild:
-	@if command -v makepkg >/dev/null 2>&1; then \
-		cd packaging/arch && makepkg -p PKGBUILD --printsrcinfo >/dev/null && makepkg -p PKGBUILD.local --printsrcinfo >/dev/null; \
-	else \
-		echo "makepkg not found; skipping PKGBUILD syntax validation"; \
-	fi
+test:
+	@cargo test --workspace --locked
 
-install-core: build-bin
-	$(INSTALL) -Dm755 "$(BIN)" "$(DESTDIR)$(PREFIX)/bin/$(BIN_NAME)"
-	$(INSTALL) -Dm644 src/usr/share/argvus/lib/i18n.sh "$(DESTDIR)$(PREFIX)/share/argvus/lib/i18n.sh"
-	$(INSTALL) -Dm644 src/usr/share/argvus/qml/argvus-i18n/I18n.qml "$(DESTDIR)$(QML_IMPORT_DIR)/org/argvus/i18n/I18n.qml"
-	$(INSTALL) -Dm644 src/usr/share/argvus/qml/argvus-i18n/qmldir "$(DESTDIR)$(QML_IMPORT_DIR)/org/argvus/i18n/qmldir"
-	$(INSTALL) -Dm644 docs/i18n.md "$(DESTDIR)$(PREFIX)/share/doc/argvus-i18n/i18n.md"
-	$(INSTALL) -Dm644 LICENSE "$(DESTDIR)$(PREFIX)/share/licenses/argvus-i18n/LICENSE"
+tests: test
 
-install-locales:
-	$(INSTALL) -dm755 "$(DESTDIR)$(PREFIX)/share/argvus/i18n"
-	cp -R --no-preserve=ownership locales/. "$(DESTDIR)$(PREFIX)/share/argvus/i18n/"
+audit:
+	@cargo audit
 
-install: install-core install-locales
+deny:
+	@cargo deny check
 
-uninstall:
-	$(RM) "$(DESTDIR)$(PREFIX)/bin/$(BIN_NAME)"
-	$(RM) "$(DESTDIR)$(PREFIX)/share/argvus/lib/i18n.sh"
-	rm -rf "$(DESTDIR)$(QML_IMPORT_DIR)/org/argvus/i18n"
-	rm -rf "$(DESTDIR)$(PREFIX)/share/argvus/i18n"
-	rm -rf "$(DESTDIR)$(PREFIX)/share/doc/argvus-i18n"
-	rm -rf "$(DESTDIR)$(PREFIX)/share/licenses/argvus-i18n"
+machete:
+	@cargo machete
 
-reinstall: uninstall install
+check: lint fmt-check clippy test
+
+rust-build:
+	@cargo build --workspace --locked
+
+release: check
+	@cargo build --workspace --release --locked
+
+package: check
+	@tools/sh/pkgbuild_local.sh
+
+pkg: package
+
+build: package
+
+install: package
+	@sudo pacman -U build/dist/*.zst --overwrite="*" --noconfirm
+
+install-package: install
+
+validate:
+	@shellcheck tools/sh/pkgbuild_local.sh
+	@cargo metadata --locked --no-deps --format-version 1 >/dev/null
+	@cd packaging/arch/ci && makepkg -p PKGBUILD --printsrcinfo >/dev/null
+	@cd packaging/arch/local && makepkg -p PKGBUILD --printsrcinfo >/dev/null
+	@echo "Validation OK"
+
+changelog:
+	@git-cliff -o CHANGELOG.md
 
 clean:
-	$(CARGO) clean
-	rm -rf dist
-	rm -f packaging/arch/*.zst packaging/arch/*.tar.gz
+	@cargo clean
+	@rm -rf build/

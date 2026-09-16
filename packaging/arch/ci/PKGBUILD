@@ -1,0 +1,52 @@
+# Maintainer: William C. Canin
+pkgbase=argvus-i18n
+pkgver=0.1.0
+pkgrel=1
+pkgdesc="Shared internationalization infrastructure and language packs for ARGVUS"
+arch=('x86_64')
+url="https://github.com/argvus/argvus-i18n"
+license=('GPL-3.0-only')
+makedepends=('cargo')
+source=("${pkgbase}-${pkgver}.tar.gz::${url}/archive/refs/tags/v${pkgver}.tar.gz")
+sha256sums=()
+pkgname=('argvus-i18n' 'argvus-language-en-us' 'argvus-language-pt-br')
+
+_source_dir() {
+  find "${srcdir}" -mindepth 1 -maxdepth 1 -type d -print -quit
+}
+
+build() {
+  cd "$(_source_dir)"
+  cargo build --workspace --release --locked
+}
+
+check() {
+  cd "$(_source_dir)"
+  cargo test --workspace --release --locked
+  ARGVUS_I18N_DIR="$PWD/locales" cargo run --release --locked -- validate
+}
+
+package_argvus-i18n() {
+  cd "$(_source_dir)"
+  install -Dm755 target/release/argvus-i18n "$pkgdir/usr/bin/argvus-i18n"
+  install -Dm644 src/usr/share/argvus/lib/i18n.sh "$pkgdir/usr/share/argvus/lib/i18n.sh"
+  install -Dm644 src/usr/share/argvus/qml/argvus-i18n/I18n.qml "$pkgdir/usr/lib/qt6/qml/org/argvus/i18n/I18n.qml"
+  install -Dm644 src/usr/share/argvus/qml/argvus-i18n/qmldir "$pkgdir/usr/lib/qt6/qml/org/argvus/i18n/qmldir"
+  install -Dm644 docs/i18n.md "$pkgdir/usr/share/doc/argvus-i18n/i18n.md"
+  install -Dm644 LICENSE "$pkgdir/usr/share/licenses/argvus-i18n/LICENSE"
+  depends=('gcc-libs' 'glibc' 'qt6-declarative' 'argvus-language-en-us')
+}
+
+package_argvus-language-en-us() {
+  arch=('any')
+  cd "$(_source_dir)"
+  install -dm755 "$pkgdir/usr/share/argvus/i18n/en-US"
+  install -m644 locales/en-US/*.json "$pkgdir/usr/share/argvus/i18n/en-US/"
+}
+
+package_argvus-language-pt-br() {
+  arch=('any')
+  cd "$(_source_dir)"
+  install -dm755 "$pkgdir/usr/share/argvus/i18n/pt-BR"
+  install -m644 locales/pt-BR/*.json "$pkgdir/usr/share/argvus/i18n/pt-BR/"
+}
