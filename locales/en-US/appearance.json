@@ -40,6 +40,7 @@
   "theme.accent_restore_failed": "Could not restore the default accent for {theme}.",
   "theme.hyprlock_failed": "Could not apply the Hyprlock theme for {theme}.",
   "theme.spaces_failed": "Could not re-apply the spaces override for {theme}.",
+  "theme.borders_failed": "Could not re-apply the borders override for {theme}.",
   "theme.wallpaper_prepare_failed": "Could not prepare the wallpaper for {theme}.",
   "wallpaper.notification.title": "Wallpaper",
   "wallpaper.notification.message": "Changed to:\n{name}"

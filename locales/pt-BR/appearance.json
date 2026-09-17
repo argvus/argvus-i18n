@@ -40,6 +40,7 @@
   "theme.accent_restore_failed": "Não foi possível restaurar a cor de destaque padrão para {theme}.",
   "theme.hyprlock_failed": "Não foi possível aplicar o tema do Hyprlock para {theme}.",
   "theme.spaces_failed": "Não foi possível reaplicar a substituição de espaços para {theme}.",
+  "theme.borders_failed": "Não foi possível reaplicar a substituição de bordas para {theme}.",
   "theme.wallpaper_prepare_failed": "Não foi possível preparar o papel de parede para {theme}.",
   "wallpaper.notification.title": "Papel de parede",
   "wallpaper.notification.message": "Alterado para:\n{name}"
