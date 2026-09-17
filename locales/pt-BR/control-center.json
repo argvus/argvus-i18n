@@ -1090,5 +1090,10 @@
   "control_center.outer_gap_right": "Espaço externo — Direito",
   "control_center.outer_gap_bottom": "Espaço externo — Inferior",
   "control_center.border_settings_applied": "Configuração de bordas aplicada",
-  "control_center.thickness_applied": "Espessura aplicada"
+  "control_center.thickness_applied": "Espessura aplicada",
+  "control_center.search_settings": "Buscar configurações...",
+  "control_center.search_results": "Resultados",
+  "control_center.search_no_results": "Nenhum resultado",
+  "control_center.search_navigation_help": "↑/↓ Navegar   Enter Abrir   Esc Limpar/Cancelar   ? Ajuda",
+  "control_center.home_navigation_search_help": "↑/↓ Navegar  Enter Abrir  / Pesquisar  s Config  ? Ajuda  q Sair"
 }

@@ -1090,5 +1090,10 @@
   "control_center.outer_gap_right": "Outer gap — Right",
   "control_center.outer_gap_bottom": "Outer gap — Bottom",
   "control_center.border_settings_applied": "Border settings applied",
-  "control_center.thickness_applied": "Thickness applied"
+  "control_center.thickness_applied": "Thickness applied",
+  "control_center.search_settings": "Search settings...",
+  "control_center.search_results": "Results",
+  "control_center.search_no_results": "No results",
+  "control_center.search_navigation_help": "↑/↓ Navigate   Enter Open   Esc Clear/Cancel   ? Help",
+  "control_center.home_navigation_search_help": "↑/↓ Navigate  Enter Open  / Search  s Config  ? Help  q Quit"
 }

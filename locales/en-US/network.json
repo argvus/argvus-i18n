@@ -4,6 +4,8 @@
   "message.available_no": "NetworkManager unavailable",
   "message.connected": "Connected",
   "message.disconnected": "Disconnected",
+  "message.limited": "Limited connectivity",
+  "message.no_internet": "No Internet access",
   "message.disabled": "Network disabled",
   "message.enabled": "Network enabled",
   "message.manager_missing": "Connection editor not found",
@@ -20,6 +22,9 @@
   "waybar.no_iface": "No network interface found",
   "waybar.network": "Network",
   "waybar.disconnected": "Disconnected",
+  "waybar.connected": "Connected",
+  "waybar.limited": "Limited connectivity",
+  "waybar.no_internet": "No Internet access",
   "waybar.reconnecting": "Reconnecting",
   "waybar.state": "State",
   "waybar.command_failed": "Command failed: {command}"
