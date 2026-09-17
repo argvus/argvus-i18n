@@ -1070,5 +1070,21 @@
   "control_center.input_applied": "Configuração de input aplicada",
   "control_center.input_apply_failed": "Não foi possível aplicar a configuração de input."
   ,"control_center.input_applying": "Aplicando configuração de input..."
-  ,"control_center.input_loading": "Carregando as configurações atuais de input..."
+  ,"control_center.input_loading": "Carregando as configurações atuais de input...",
+  "control_center.spaces_borders_position": "Espaços, Bordas e Posição",
+  "control_center.taskbar_spaces": "Espaços da barra de tarefas",
+  "control_center.window_spaces": "Espaços das janelas",
+  "control_center.general_borders": "Bordas gerais",
+  "control_center.edge_thickness": "Espessura das bordas",
+  "control_center.right": "Direita",
+  "control_center.left": "Esquerda",
+  "control_center.rounded": "Arredondado",
+  "control_center.rounding": "Arredondamento",
+  "control_center.thickness": "Espessura",
+  "control_center.outer_gap_top": "Espaço externo — Superior",
+  "control_center.outer_gap_left": "Espaço externo — Esquerdo",
+  "control_center.outer_gap_right": "Espaço externo — Direito",
+  "control_center.outer_gap_bottom": "Espaço externo — Inferior",
+  "control_center.border_settings_applied": "Configuração de bordas aplicada",
+  "control_center.thickness_applied": "Espessura aplicada"
 }

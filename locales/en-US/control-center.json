@@ -1070,5 +1070,21 @@
   "control_center.input_applied": "Input setting applied",
   "control_center.input_apply_failed": "Could not apply input setting."
   ,"control_center.input_applying": "Applying input setting..."
-  ,"control_center.input_loading": "Loading current input settings..."
+  ,"control_center.input_loading": "Loading current input settings...",
+  "control_center.spaces_borders_position": "Spaces, Borders & Position",
+  "control_center.taskbar_spaces": "Taskbar spaces",
+  "control_center.window_spaces": "Window spaces",
+  "control_center.general_borders": "General borders",
+  "control_center.edge_thickness": "Edge thickness",
+  "control_center.right": "Right",
+  "control_center.left": "Left",
+  "control_center.rounded": "Rounded",
+  "control_center.rounding": "Rounding",
+  "control_center.thickness": "Thickness",
+  "control_center.outer_gap_top": "Outer gap — Top",
+  "control_center.outer_gap_left": "Outer gap — Left",
+  "control_center.outer_gap_right": "Outer gap — Right",
+  "control_center.outer_gap_bottom": "Outer gap — Bottom",
+  "control_center.border_settings_applied": "Border settings applied",
+  "control_center.thickness_applied": "Thickness applied"
 }
