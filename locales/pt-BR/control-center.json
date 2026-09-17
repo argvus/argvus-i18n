@@ -765,6 +765,8 @@
   "control_center.the_new_password_must_be_nonempty_and_match_its_confirmation": "A nova senha deve ser preenchida e coincidir com a confirmação.",
   "control_center.theme": "Tema",
   "control_center.theme_applied": "Tema aplicado",
+  "control_center.theme_mode_sticky": "Fixo",
+  "control_center.theme_mode_float": "Flutuante",
   "control_center.themes": "Temas",
   "control_center.this_monitor": "este monitor",
   "control_center.this_program_is_distributed_in_the_hope_that_it_will_be_useful_but_wit": "Este programa é distribuído na esperança de que seja útil, mas SEM NENHUMA GARANTIA; sem sequer a garantia implícita de COMERCIABILIDADE ou ADEQUAÇÃO A UM DETERMINADO FIM. Veja a GNU General Public License para mais detalhes.",
