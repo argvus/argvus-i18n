@@ -5,7 +5,7 @@
   "spaces.value_exceeds_maximum": "Value {value} exceeds maximum {maximum}.",
   "spaces.missing_key": "Missing key",
   "spaces.missing_key_value": "Missing key/value",
-  "spaces.usage": "Usage: spaces-switch.sh [--status|--defaults|--get <key>|--set <key> <value>|--reset [key]|--apply-static|--apply]",
+  "spaces.usage": "Usage: spaces-switch.sh [--status|--defaults|--get <key>|--set <key> <value>|--set-persist <key> <value>|--reset [key]|--apply-static|--apply]",
   "borders.invalid_key": "Invalid key: {key}",
   "borders.invalid_rounded": "Invalid Rounded value: {value} (use 0|1)",
   "borders.invalid_rounding": "Invalid Rounding value: {value}",
