@@ -27,7 +27,7 @@
   "theme.family.dark_slate": "ARGVUS Dark Slate >",
   "theme.family.dark_universe": "ARGVUS Dark Universe >",
   "theme.family.light_veil": "ARGVUS Light Veil >",
-  "theme.model.normal": "Normal",
+  "theme.model.sticky": "Sticky",
   "theme.model.float": "Float",
   "theme.applying": "Applying theme, please wait...",
   "theme.directory_missing": "Theme directory not found: {path}",
