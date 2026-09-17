@@ -33,6 +33,8 @@
   "spaces.gap_out_bottom": "Outer Gap Bottom",
   "spaces.rounded": "Rounded",
   "spaces.rounding": "Rounding",
+  "spaces.edge_thickness": "Edge thickness",
+  "spaces.thickness": "Thickness",
   "action.apply": "Apply",
   "spaces.taskbar_position": "Taskbar position",
   "spaces.taskbar_spaces": "Taskbar spaces",

@@ -10,6 +10,8 @@
   "borders.invalid_rounded": "Valor Rounded inválido: {value} (use 0|1)",
   "borders.invalid_rounding": "Valor Rounding inválido: {value}",
   "borders.rounding_range": "Rounding deve estar entre {minimum} e {maximum}.",
+  "borders.invalid_thickness": "Valor Thickness inválido: {value}",
+  "borders.thickness_range": "Thickness deve estar entre {minimum} e {maximum}.",
   "borders.missing_key": "Chave não informada",
   "borders.missing_key_value": "Chave/valor não informados",
   "borders.usage": "Uso: borders-switch.sh [--status|--defaults|--get <chave>|--set <chave> <valor>|--reset|--apply]",
