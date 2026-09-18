@@ -9,6 +9,8 @@
   "notifications.dnd_enabled": "Não perturbe ativado",
   "notifications.unavailable": "Notificações indisponíveis",
   "power_profile.tooltip": "Perfil de energia: {profile}\nDriver: {driver}",
+  "keep_awake.enabled": "Manter acordado ativado",
+  "keep_awake.disabled": "Manter acordado desativado",
   "date.format": "{weekday}, {day} de {month}",
   "date.weekday.1": "segunda-feira",
   "date.weekday.2": "terça-feira",

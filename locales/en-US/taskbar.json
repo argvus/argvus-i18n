@@ -9,6 +9,8 @@
   "notifications.dnd_enabled": "Do Not Disturb enabled",
   "notifications.unavailable": "Notifications unavailable",
   "power_profile.tooltip": "Power profile: {profile}\nDriver: {driver}",
+  "keep_awake.enabled": "Keep Awake enabled",
+  "keep_awake.disabled": "Keep Awake disabled",
   "date.format": "{weekday}, {day} {month}",
   "date.weekday.1": "Monday",
   "date.weekday.2": "Tuesday",
