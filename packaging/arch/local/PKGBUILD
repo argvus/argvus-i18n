@@ -16,6 +16,10 @@ _source_dir() {
   find "${srcdir}" -mindepth 1 -maxdepth 1 -type d -print -quit
 }
 
+_cargo_target_dir() {
+  printf '%s' "${CARGO_TARGET_DIR:-$(_source_dir)/target}"
+}
+
 build() {
   cd "$(_source_dir)"
   cargo build --workspace --release --locked
@@ -29,7 +33,7 @@ check() {
 
 package_argvus-i18n() {
   cd "$(_source_dir)"
-  install -Dm755 target/release/argvus-i18n "$pkgdir/usr/bin/argvus-i18n"
+  install -Dm755 "$(_cargo_target_dir)/release/argvus-i18n" "$pkgdir/usr/bin/argvus-i18n"
   install -Dm644 src/usr/share/argvus/lib/i18n.sh "$pkgdir/usr/share/argvus/lib/i18n.sh"
   install -Dm644 src/usr/share/argvus/qml/argvus-i18n/I18n.qml "$pkgdir/usr/lib/qt6/qml/org/argvus/i18n/I18n.qml"
   install -Dm644 src/usr/share/argvus/qml/argvus-i18n/qmldir "$pkgdir/usr/lib/qt6/qml/org/argvus/i18n/qmldir"
