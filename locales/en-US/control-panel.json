@@ -43,7 +43,6 @@
   "taskbar.top": "Top",
   "taskbar.bottom": "Bottom",
   "notifications.none": "No notifications",
-  "notifications.recent": "recent",
   "notifications.clear": "Clear",
   "notifications.app_unknown": "system",
   "notifications.do_not_disturb": "Do Not Disturb",
