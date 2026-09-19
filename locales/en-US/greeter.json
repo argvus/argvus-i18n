@@ -19,5 +19,17 @@
   "power": "Power",
   "power.shutdown": "Shut down",
   "power.restart": "Restart",
-  "power.suspend": "Suspend"
+  "power.suspend": "Suspend",
+  "users": "Users",
+  "account": "Account",
+  "session": "Session",
+  "avatar": "Avatar",
+  "default_avatar": "Default avatar",
+  "select_user_help": "Select a user, then press Enter or Tab.",
+  "navigation_help": "↑↓/←→ navigate  Tab focus  Enter select  Esc clear  Ctrl+C exit",
+  "power_requested": "Power action requested.",
+  "power_failed": "Power action failed",
+  "terminal_window_is_too_small": "Terminal window is too small.",
+  "minimum_size": "Minimum size",
+  "current_size": "Current size"
 }

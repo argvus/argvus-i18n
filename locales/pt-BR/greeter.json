@@ -19,5 +19,17 @@
   "power": "Energia",
   "power.shutdown": "Desligar",
   "power.restart": "Reiniciar",
-  "power.suspend": "Suspender"
+  "power.suspend": "Suspender",
+  "users": "Usuários",
+  "account": "Conta",
+  "session": "Sessão",
+  "avatar": "Avatar",
+  "default_avatar": "Avatar padrão",
+  "select_user_help": "Selecione um usuário e pressione Enter ou Tab.",
+  "navigation_help": "↑↓/←→ navegar  Tab foco  Enter selecionar  Esc limpar  Ctrl+C sair",
+  "power_requested": "Ação de energia solicitada.",
+  "power_failed": "Falha na ação de energia",
+  "terminal_window_is_too_small": "A janela do terminal é pequena demais.",
+  "minimum_size": "Tamanho mínimo",
+  "current_size": "Tamanho atual"
 }
