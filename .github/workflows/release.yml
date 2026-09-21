@@ -23,7 +23,7 @@ jobs:
 
     steps:
       - name: Checkout source
-        uses: actions/checkout@v4
+        uses: actions/checkout@v7
 
       - name: Install packaging tools
         run: |
@@ -135,7 +135,7 @@ jobs:
           done <<< "$pkg_files"
 
       - name: Upload temporary package artifact
-        uses: actions/upload-artifact@v4
+        uses: actions/upload-artifact@v7
         with:
           name: argvus-i18n-packages
           path: |
@@ -145,7 +145,7 @@ jobs:
           retention-days: 1
 
       - name: Checkout packages repository
-        uses: actions/checkout@v4
+        uses: actions/checkout@v7
         with:
           repository: argvus/packages
           path: packages-repo
@@ -212,7 +212,7 @@ jobs:
           git push
 
       - name: Create GitHub Release
-        uses: softprops/action-gh-release@v2
+        uses: softprops/action-gh-release@v3
         with:
           tag_name: ${{ github.ref_name }}
           name: ${{ github.ref_name }}
