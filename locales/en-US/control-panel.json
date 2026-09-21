@@ -14,6 +14,7 @@
   "card.power.title": "POWER",
   "card.display.title": "DISPLAY",
   "card.about.title": "ABOUT",
+  "loading.cards": "Loading cards...",
   "about.hint": "View system information, modules, credits and license.",
   "about.open": "Open About",
   "display.scale": "Scale",

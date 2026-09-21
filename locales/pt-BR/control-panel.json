@@ -14,6 +14,7 @@
   "card.power.title": "ENERGIA",
   "card.display.title": "MONITOR",
   "card.about.title": "SOBRE",
+  "loading.cards": "Carregando cards...",
   "about.hint": "Veja informações do sistema, módulos, créditos e licença.",
   "about.open": "Abrir Sobre",
   "display.scale": "Escala",
