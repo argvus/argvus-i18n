@@ -1187,5 +1187,12 @@
   "control_center.restore_all_shortcuts": "Restaurar todos os atalhos",
   "control_center.restore_all_shortcuts_description": "Remover todos os overrides pessoais e recarregar o Hyprland?",
   "control_center.keybindings_choose_replace": "Atalho já usado. Esc Cancela · r Substitui",
-  "control_center.keybindings_replaced": "Atalho substituído e Hyprland recarregado"
+  "control_center.keybindings_replaced": "Atalho substituído e Hyprland recarregado",
+  "control_center.theme_profile_export": "Exportar perfil do tema",
+  "control_center.theme_profile_import": "Importar perfil do tema",
+  "control_center.theme_profile_export_path": "Salvar perfil (.tar.gz)",
+  "control_center.theme_profile_import_path": "Caminho do perfil (.tar.gz)",
+  "control_center.theme_profile_invalid_archive": "Informe um perfil .tar.gz válido",
+  "control_center.theme_profile_exported": "Perfil do tema exportado",
+  "control_center.theme_profile_imported": "Perfil do tema importado"
 }

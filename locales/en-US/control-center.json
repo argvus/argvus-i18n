@@ -1187,5 +1187,12 @@
   "control_center.restore_all_shortcuts": "Restore all shortcuts",
   "control_center.restore_all_shortcuts_description": "Remove all personal shortcut overrides and reload Hyprland?",
   "control_center.keybindings_choose_replace": "Shortcut already in use. Esc Cancel · r Replace",
-  "control_center.keybindings_replaced": "Shortcut replaced and Hyprland reloaded"
+  "control_center.keybindings_replaced": "Shortcut replaced and Hyprland reloaded",
+  "control_center.theme_profile_export": "Export theme profile",
+  "control_center.theme_profile_import": "Import theme profile",
+  "control_center.theme_profile_export_path": "Save profile (.tar.gz)",
+  "control_center.theme_profile_import_path": "Profile path (.tar.gz)",
+  "control_center.theme_profile_invalid_archive": "Enter a valid .tar.gz profile path",
+  "control_center.theme_profile_exported": "Theme profile exported",
+  "control_center.theme_profile_imported": "Theme profile imported"
 }
