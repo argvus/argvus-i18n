@@ -41,5 +41,5 @@
   "tty.already_graphical": "já existe uma sessão gráfica (WAYLAND_DISPLAY={wayland} DISPLAY={display})",
   "usage.get_default": "Uso: get-default.sh <categoria>",
   "usage.keyboard_cycle": "Uso: {command} [cycle|--list]",
-  "usage.effects": "Uso: {command} {status|enable|disable|toggle}"
+  "usage.effects": "Uso: {command} [animations|transparency] {status|enable|disable|toggle}"
 }
