@@ -797,6 +797,8 @@
   "control_center.taskbar_position": "Taskbar position",
   "control_center.taskbar_position_changed": "Taskbar position changed",
   "control_center.taskbar_position_f0e1c3": "Taskbar position",
+  "control_center.taskbar": "Taskbar",
+  "control_center.taskbar_changed": "Taskbar updated",
   "control_center.taskbar_utility_group": "Taskbar utility group",
   "control_center.taskbar_utility_group_auto": "Expand on hover",
   "control_center.taskbar_utility_group_always_expanded": "Always expanded",

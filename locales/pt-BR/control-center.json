@@ -797,6 +797,8 @@
   "control_center.taskbar_position": "Posição da barra de tarefas",
   "control_center.taskbar_position_changed": "Posição da barra alterada",
   "control_center.taskbar_position_f0e1c3": "Posição da barra",
+  "control_center.taskbar": "Barra de tarefas",
+  "control_center.taskbar_changed": "Barra de tarefas atualizada",
   "control_center.taskbar_utility_group": "Grupo de utilitários da barra de tarefas",
   "control_center.taskbar_utility_group_auto": "Expandir ao passar o mouse",
   "control_center.taskbar_utility_group_always_expanded": "Sempre expandido",
