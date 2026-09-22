@@ -1197,6 +1197,7 @@
   "control_center.theme_profile_imported": "Theme profile imported"
   ,"control_center.theme_profile_export_name": "Theme name"
   ,"control_center.theme_profile_applied": "Custom theme applied"
+  ,"control_center.theme_profile_wallpaper_missing": "wallpaper was unavailable; using the official wallpaper"
   ,"control_center.theme_profile_deleted": "Custom theme deleted"
   ,"control_center.theme_profile_official": "Official Themes"
   ,"control_center.theme_profile_custom": "Custom Themes"
