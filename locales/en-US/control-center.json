@@ -817,6 +817,8 @@
   "control_center.theme_applied": "Theme applied",
   "control_center.theme_mode_sticky": "Sticky",
   "control_center.theme_mode_float": "Float",
+  "control_center.theme_category_dark": "Dark",
+  "control_center.theme_category_light": "Light",
   "control_center.themes": "Themes",
   "control_center.this_monitor": "this monitor",
   "control_center.this_program_is_distributed_in_the_hope_that_it_will_be_useful_but_wit": "This program is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU General Public License for more details.",
