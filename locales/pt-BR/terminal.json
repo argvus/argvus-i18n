@@ -5,5 +5,8 @@
   "unsupported_font_profile": "Perfil de fonte não suportado: {profile}",
   "kitty_not_installed": "O Kitty não está instalado",
   "config_not_found": "A configuração do Kitty não foi encontrada em {path}",
-  "tui_config_not_found": "A configuração TUI do Kitty não foi encontrada em {path}"
+  "tui_config_not_found": "A configuração TUI do Kitty não foi encontrada em {path}",
+  "cache_create_failed": "Não foi possível criar o cache de runtime do Kitty em {path}",
+  "cache_write_failed": "Não foi possível gravar o cache de runtime do Kitty em {path}",
+  "cache_lock_failed": "Não foi possível bloquear o cache de runtime do Kitty em {path}"
 }

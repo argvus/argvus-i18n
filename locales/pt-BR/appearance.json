@@ -47,6 +47,7 @@
   "theme.applying": "Aplicando o tema, aguarde...",
   "theme.directory_missing": "Diretório do tema não encontrado: {path}",
   "theme.reload_failed": "Falha ao recarregar a sessão após aplicar o tema.",
+  "theme.terminal_apply_failed": "O tema mudou, mas não foi possível atualizar o cache do argvus-terminal.",
   "theme.wallpaper_missing": "Papel de parede não encontrado: {path}",
   "theme.usage": "Uso: theme-switch <nome-do-tema>",
   "theme.superfile_missing": "Tema do Superfile não encontrado: {path}",
