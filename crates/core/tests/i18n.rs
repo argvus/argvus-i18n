@@ -63,8 +63,8 @@ fn explicit_config_beats_locale_environment() {
   let _guard = env_lock().lock().unwrap();
   let root = root();
   let config = root.join("config");
-  fs::create_dir_all(config.join("argvus")).unwrap();
-  fs::write(config.join("argvus/language"), "pt-BR").unwrap();
+  fs::create_dir_all(config.join("argvus/data")).unwrap();
+  fs::write(config.join("argvus/data/language"), "pt-BR").unwrap();
   let old_config = std::env::var_os("XDG_CONFIG_HOME");
   let old_lang = std::env::var_os("LANG");
   unsafe {
@@ -337,8 +337,8 @@ fn explicit_xdg_config_path_is_used() {
   let _guard = env_lock().lock().unwrap();
   let root = root();
   let config = root.join("custom-xdg");
-  fs::create_dir_all(config.join("argvus")).unwrap();
-  fs::write(config.join("argvus/language"), "pt-BR").unwrap();
+  fs::create_dir_all(config.join("argvus/data")).unwrap();
+  fs::write(config.join("argvus/data/language"), "pt-BR").unwrap();
   let old_config = std::env::var_os("XDG_CONFIG_HOME");
   let old_all = std::env::var_os("LC_ALL");
   unsafe {

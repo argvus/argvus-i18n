@@ -184,7 +184,7 @@ pub fn config_path() -> Option<PathBuf> {
   let root = env::var_os("XDG_CONFIG_HOME")
     .map(PathBuf::from)
     .or_else(|| env::var_os("HOME").map(|home| PathBuf::from(home).join(".config")))?;
-  Some(root.join("argvus/language"))
+  Some(root.join("argvus/data/language"))
 }
 
 pub fn detect_locale_from(root: &Path) -> String {
