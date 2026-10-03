@@ -536,6 +536,7 @@
   "control_center.navigate_scroll": "↑/↓           Navigate/scroll",
   "control_center.navigate_search_enter_open_esc_back_help": "↑/↓ Navigate   / Search   →/Enter Open   ←/Esc Back   ? Help",
   "control_center.navigate_space_toggle_search_enter_apply_esc_back": "↑/↓ Navigate   Space Toggle   / Search   Enter Apply   ←/Esc Back",
+  "control_center.navigate_space_enable_enter_default_search_esc_back_help": "↑/↓ Navigate   SPACE enable/disable   Enter default   / Search   ←/Esc Back   ? Help",
   "control_center.navigate_tab_actions_enter_activate_move_r_refresh_esc_back_help": "↑/↓ Navigate   Tab Actions   →/Enter Activate   ←/→ Move   r Refresh   ←/Esc Back   ? Help",
   "control_center.navigate_tab_actions_enter_activate_move_search_r_refresh_esc_back_hel": "↑/↓ Navigate   Tab Actions   →/Enter Activate   ←/→ Move   / Search   r Refresh   ←/Esc Back   ? Help",
   "control_center.navigate_tab_actions_enter_list_r_refresh_esc_back_help": "↑/↓ Navigate   Tab Actions   Enter List   r Refresh   ←/Esc Back   ? Help",

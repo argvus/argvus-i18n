@@ -58,7 +58,6 @@
   "appearance.accent": "Cor de destaque",
   "appearance.hex_color": "HEX",
   "appearance.apply_accent": "Aplicar",
-  "appearance.reset_accent": "Restaurar",
   "appearance.widget.title": "WIDGET TELEMETRIA",
   "appearance.widget.enabled": "Widget esquerdo ativo",
   "appearance.widget.disabled": "Widget esquerdo inativo",
