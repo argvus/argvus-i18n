@@ -536,6 +536,7 @@
   "control_center.navigate_scroll": "↑/↓           Navegar/rolar",
   "control_center.navigate_search_enter_open_esc_back_help": "↑/↓ Navegar   / Buscar   →/Enter Abrir   ←/Esc Voltar   ? Ajuda",
   "control_center.navigate_space_toggle_search_enter_apply_esc_back": "↑/↓ Navegar   Space Alternar   / Buscar   Enter Aplicar   ←/Esc Voltar",
+  "control_center.navigate_space_enable_enter_default_search_esc_back_help": "↑/↓ Navegar   ESPAÇO ativar/desativar   Enter padrão   / Buscar   ←/Esc Voltar   ? Ajuda",
   "control_center.navigate_tab_actions_enter_activate_move_r_refresh_esc_back_help": "↑/↓ Navegar   Tab Ações   →/Enter Ativar   ←/→ Mover   r Atualizar   ←/Esc Voltar   ? Ajuda",
   "control_center.navigate_tab_actions_enter_activate_move_search_r_refresh_esc_back_hel": "↑/↓ Navegar   Tab Ações   →/Enter Ativar   ←/→ Mover   / Buscar   r Atualizar   ←/Esc Voltar   ? Ajuda",
   "control_center.navigate_tab_actions_enter_list_r_refresh_esc_back_help": "↑/↓ Navegar   Tab Ações   Enter Lista   r Atualizar   ←/Esc Voltar   ? Ajuda",
