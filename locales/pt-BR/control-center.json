@@ -207,6 +207,31 @@
   "control_center.delete_this_profile": "Excluir este perfil?",
   "control_center.delete_user_and_home": "Excluir usuário e home",
   "control_center.delete_user_keep_home": "Excluir usuário (manter home)",
+  "control_center.user_info": "Dados do usuário",
+  "control_center.save_user": "Salvar",
+  "control_center.choice": "Escolha:",
+  "control_center.make_admin": "Tornar este usuário administrador",
+  "control_center.username_required": "Informe primeiro o nome de usuário",
+  "control_center.maintain": "Manter",
+  "control_center.delete_irreversible": "Você realmente quer excluir? Esta operação é irreversível.",
+  "control_center.user_groups": "Grupos",
+  "control_center.actions": "Ações",
+  "control_center.password": "Senha",
+  "control_center.delete_user": "Excluir",
+  "control_center.edit_avatar": "Editar avatar",
+  "control_center.avatar_loaded": "<carregado>",
+  "control_center.avatar_none": "<nenhum>",
+  "control_center.esc_cancels": "Esc cancela",
+  "control_center.password_ok": "Ok",
+  "control_center.keep_home": "Manter home",
+  "control_center.delete_home": "Excluir home",
+  "control_center.ready": "Pronto",
+  "control_center.actions_hint": "←/→ mover · Enter executar · Tab alternar",
+  "control_center.nothing_to_save": "Nenhuma alteração para salvar",
+  "control_center.unsaved_changes": "Aviso: há alterações não salvas",
+  "control_center.password_configuration": "Configuração de senha",
+  "control_center.security": "Segurança:",
+  "control_center.user_page_keys": "↑/↓ Opções   ←/→ Ações   Enter Abrir   Esc Voltar   ? Ajuda",
   "control_center.deletion_cancelled": "Exclusão cancelada",
   "control_center.deny": "Negar",
   "control_center.dependencies": "DEPENDÊNCIAS",
@@ -627,6 +652,7 @@
   "control_center.navigate_tab_actions_adjust_enter_activate_esc_back_help": "↑/↓ Navegar   Tab Ações   +/- Ajustar   Enter Ativar   ←/Esc Voltar   ? Ajuda",
   "control_center.navigate_tab_actions_move_enter_activate_r_refresh_esc_back_help": "↑/↓ Navegar   Tab Ações   ←/→ Mover   Enter Ativar   r Atualizar   ←/Esc Voltar   ? Ajuda",
   "control_center.navigate_tab_actions_move_enter_activate_search_esc_back_help": "↑/↓ Navegar   Tab Ações   ←/→ Mover   Enter Ativar   / Buscar   ←/Esc Voltar   ? Ajuda",
+  "control_center.navigate_volume_enter_set_default_r_refresh_s_save_esc_back_help": "↑/↓ Navegar   ← -/+ → Volume   Enter Definir padrão  r Atualizar  s Salvar  Esc Voltar   ? Ajuda",
   "control_center.network": "Rede",
   "control_center.network_interface": "INTERFACE DE REDE",
   "control_center.network_refreshed": "Rede atualizada",
@@ -991,7 +1017,6 @@
   "control_center.username": "Usuário",
   "control_center.users": "Usuários",
   "control_center.uuid": "UUID:",
-  "control_center.value": "Valor",
   "control_center.variant": "Variante",
   "control_center.variant_changed": "Variante alterada",
   "control_center.vendor": "Fabricante:",
@@ -1210,8 +1235,8 @@
   "control_center.package_lock_evidence": "O bloqueio é informado apenas como evidência e nunca é removido automaticamente.",
   "control_center.package_updates": "Atualizações de pacotes",
   "control_center.updates_available": "{count} atualização(ões) disponível(is)",
-  "control_center.package_backend_status": "O estado dos pacotes é obtido do backend existente."
-  ,"control_center.service_state_unavailable": "Estado dos serviços indisponível",
+  "control_center.package_backend_status": "O estado dos pacotes é obtido do backend existente.",
+  "control_center.service_state_unavailable": "Estado dos serviços indisponível",
   "control_center.hardware_gpu": "GPU",
   "control_center.check_hardware_gpu": "Verifique Hardware > GPU e os drivers gráficos.",
   "control_center.smart_device": "SMART {device}",
@@ -1243,9 +1268,9 @@
   "control_center.input_hardware_applying": "Aplicando configuração do mouse de hardware...",
   "control_center.input_hardware_apply_failed": "Não foi possível aplicar a configuração do mouse de hardware.",
   "control_center.input_applied": "Configuração de input aplicada",
-  "control_center.input_apply_failed": "Não foi possível aplicar a configuração de input."
-  ,"control_center.input_applying": "Aplicando configuração de input..."
-  ,"control_center.input_loading": "Carregando as configurações atuais de input...",
+  "control_center.input_apply_failed": "Não foi possível aplicar a configuração de input.",
+  "control_center.input_applying": "Aplicando configuração de input...",
+  "control_center.input_loading": "Carregando as configurações atuais de input...",
   "control_center.spaces_borders_position": "Espaços, Bordas e Posição",
   "control_center.taskbar_spaces": "Espaços da barra de tarefas",
   "control_center.window_spaces": "Espaços das janelas",
@@ -1301,8 +1326,7 @@
   "control_center.restore_default": "Restaurar padrão",
   "control_center.keybindings_editor_navigation": "Tab selecionar  Espaço alternar  Enter aplicar",
   "control_center.keybindings_editor_actions": "Esc cancelar  Backspace desativar  r restaurar",
-  "control_center.disabled": "Desativado"
-  ,"control_center.keybindings_press_key": "Pressione um novo atalho (Esc cancela)",
+  "control_center.keybindings_press_key": "Pressione um novo atalho (Esc cancela)",
   "control_center.keybindings_conflict": "Esse atalho já está em uso",
   "control_center.keybindings_conflict_title": "Conflito de atalho",
   "control_center.keybindings_used_by": "Usado atualmente por:",
@@ -1316,30 +1340,30 @@
   "control_center.theme_profile_import_path": "Caminho do perfil (.tar.gz)",
   "control_center.theme_profile_invalid_archive": "Informe um perfil .tar.gz válido",
   "control_center.theme_profile_exported": "Perfil do tema exportado",
-  "control_center.theme_profile_imported": "Perfil do tema importado"
-  ,"control_center.theme_profile_export_name": "Nome do tema"
-  ,"control_center.theme_profile_applied": "Tema personalizado aplicado"
-  ,"control_center.theme_profile_wallpaper_missing": "o wallpaper não estava disponível; usando o wallpaper oficial"
-  ,"control_center.theme_profile_deleted": "Tema personalizado excluído"
-  ,"control_center.theme_profile_official": "Temas oficiais"
-  ,"control_center.theme_profile_custom": "Temas personalizados"
-  ,"control_center.theme_profile_custom_empty": "Nenhum tema importado"
-  ,"control_center.theme_profile_export_import": "Exportar / Importar"
-  ,"control_center.theme_profile_themes_help": "↑/↓ Navegar  Enter Aplicar / Abrir  d Excluir  e Exportar  i Importar  Esc Voltar"
-  ,"control_center.theme_profile_import_help": "↑/↓ Selecionar archive  Enter Importar  Esc Voltar"
-  ,"control_center.theme_profile_delete": "Excluir"
-  ,"control_center.theme_profile_delete_title": "Excluir tema?"
-  ,"control_center.theme_profile_delete_description": "O tema importado será removido. O wallpaper será mantido."
-  ,"control_center.theme_profile_delete_help": "↑/↓ Selecionar  Enter Confirmar  Esc Cancelar"
-  ,"control_center.theme_profile_invalid_name": "Informe um nome para o tema"
-  ,"control_center.theme_profile_output": "Saída"
-  ,"control_center.theme_profile_importing": "Validando o perfil do tema..."
-  ,"control_center.theme_profile_duplicate_title": "O tema já existe"
-  ,"control_center.theme_profile_duplicate_description": "Substituir o tema importado existente?"
-  ,"control_center.theme_profile_duplicate_replace": "Substituir"
-  ,"control_center.theme_profile_duplicate_help": "↑/↓ Selecionar  Enter Confirmar  Esc Cancelar"
-  ,"control_center.unavailable_no_wifi_card": "Indisponível · sem placa Wi-Fi"
-  ,"control_center.signal": "Sinal:"
-  ,"control_center.security": "Segurança:"
-  ,"control_center.frequency": "Frequência:"
+  "control_center.theme_profile_imported": "Perfil do tema importado",
+  "control_center.theme_profile_export_name": "Nome do tema",
+  "control_center.theme_profile_applied": "Tema personalizado aplicado",
+  "control_center.theme_profile_wallpaper_missing": "o wallpaper não estava disponível; usando o wallpaper oficial",
+  "control_center.theme_profile_deleted": "Tema personalizado excluído",
+  "control_center.theme_profile_official": "Temas oficiais",
+  "control_center.theme_profile_custom": "Temas personalizados",
+  "control_center.theme_profile_custom_empty": "Nenhum tema importado",
+  "control_center.theme_profile_export_import": "Exportar / Importar",
+  "control_center.theme_profile_themes_help": "↑/↓ Navegar  Enter Aplicar / Abrir  d Excluir  e Exportar  i Importar  Esc Voltar",
+  "control_center.theme_profile_import_help": "↑/↓ Selecionar archive  Enter Importar  Esc Voltar",
+  "control_center.theme_profile_delete": "Excluir",
+  "control_center.theme_profile_delete_title": "Excluir tema?",
+  "control_center.theme_profile_delete_description": "O tema importado será removido. O wallpaper será mantido.",
+  "control_center.theme_profile_delete_help": "↑/↓ Selecionar  Enter Confirmar  Esc Cancelar",
+  "control_center.theme_profile_invalid_name": "Informe um nome para o tema",
+  "control_center.theme_profile_output": "Saída",
+  "control_center.theme_profile_importing": "Validando o perfil do tema...",
+  "control_center.theme_profile_duplicate_title": "O tema já existe",
+  "control_center.theme_profile_duplicate_description": "Substituir o tema importado existente?",
+  "control_center.theme_profile_duplicate_replace": "Substituir",
+  "control_center.theme_profile_duplicate_help": "↑/↓ Selecionar  Enter Confirmar  Esc Cancelar",
+  "control_center.unavailable_no_wifi_card": "Indisponível · sem placa Wi-Fi",
+  "control_center.signal": "Sinal:",
+  "control_center.frequency": "Frequência:",
+  "control_center.view_logs": "Ver logs"
 }

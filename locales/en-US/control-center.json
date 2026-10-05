@@ -207,6 +207,31 @@
   "control_center.delete_this_profile": "Delete this profile?",
   "control_center.delete_user_and_home": "Delete user and home",
   "control_center.delete_user_keep_home": "Delete user (keep home)",
+  "control_center.user_info": "User Data",
+  "control_center.save_user": "Save",
+  "control_center.choice": "Choice:",
+  "control_center.make_admin": "Make this user an administrator",
+  "control_center.username_required": "Enter a username first",
+  "control_center.maintain": "Maintain",
+  "control_center.delete_irreversible": "Do you really want to delete? This operation is irreversible.",
+  "control_center.user_groups": "Groups",
+  "control_center.actions": "Actions",
+  "control_center.password": "Password",
+  "control_center.delete_user": "Delete",
+  "control_center.edit_avatar": "Edit avatar",
+  "control_center.avatar_loaded": "<loaded>",
+  "control_center.avatar_none": "<none>",
+  "control_center.esc_cancels": "Esc cancels",
+  "control_center.password_ok": "Ok",
+  "control_center.keep_home": "Keep home",
+  "control_center.delete_home": "Delete home",
+  "control_center.ready": "Ready",
+  "control_center.actions_hint": "←/→ move · Enter run · Tab switch",
+  "control_center.nothing_to_save": "No changes to save",
+  "control_center.unsaved_changes": "Warn: There are unsaved changes",
+  "control_center.password_configuration": "Password configuration",
+  "control_center.security": "Security:",
+  "control_center.user_page_keys": "↑/↓ Options   ←/→ Actions   Enter Open   Esc Back   ? Help",
   "control_center.deletion_cancelled": "Deletion cancelled",
   "control_center.deny": "Deny",
   "control_center.dependencies": "DEPENDENCIES",
@@ -627,6 +652,7 @@
   "control_center.navigate_tab_actions_adjust_enter_activate_esc_back_help": "↑/↓ Navigate   Tab Actions   +/- Adjust   Enter Activate   ←/Esc Back   ? Help",
   "control_center.navigate_tab_actions_move_enter_activate_r_refresh_esc_back_help": "↑/↓ Navigate   Tab Actions   ←/→ Move   Enter Activate   r Refresh   ←/Esc Back   ? Help",
   "control_center.navigate_tab_actions_move_enter_activate_search_esc_back_help": "↑/↓ Navigate   Tab Actions   ←/→ Move   Enter Activate   / Search   ←/Esc Back   ? Help",
+  "control_center.navigate_volume_enter_set_default_r_refresh_s_save_esc_back_help": "↑/↓ Navigate   ← -/+ → Volume   Enter Set Default  r Refresh  s Save  Esc Back   ? Help",
   "control_center.network": "Network",
   "control_center.network_interface": "NETWORK INTERFACE",
   "control_center.network_refreshed": "Network refreshed",
@@ -991,7 +1017,6 @@
   "control_center.username": "Username",
   "control_center.users": "Users",
   "control_center.uuid": "UUID:",
-  "control_center.value": "Value",
   "control_center.variant": "Variant",
   "control_center.variant_changed": "Variant changed",
   "control_center.vendor": "Vendor:",
@@ -1210,8 +1235,8 @@
   "control_center.package_lock_evidence": "The lock is reported as evidence only and is never removed automatically.",
   "control_center.package_updates": "Package updates",
   "control_center.updates_available": "{count} update(s) available",
-  "control_center.package_backend_status": "Package status is consumed from the existing package backend."
-  ,"control_center.service_state_unavailable": "Service state unavailable",
+  "control_center.package_backend_status": "Package status is consumed from the existing package backend.",
+  "control_center.service_state_unavailable": "Service state unavailable",
   "control_center.hardware_gpu": "GPU",
   "control_center.check_hardware_gpu": "Check Hardware > GPU and graphics drivers.",
   "control_center.smart_device": "SMART {device}",
@@ -1243,9 +1268,9 @@
   "control_center.input_hardware_applying": "Applying hardware mouse setting...",
   "control_center.input_hardware_apply_failed": "Could not apply hardware mouse setting.",
   "control_center.input_applied": "Input setting applied",
-  "control_center.input_apply_failed": "Could not apply input setting."
-  ,"control_center.input_applying": "Applying input setting..."
-  ,"control_center.input_loading": "Loading current input settings...",
+  "control_center.input_apply_failed": "Could not apply input setting.",
+  "control_center.input_applying": "Applying input setting...",
+  "control_center.input_loading": "Loading current input settings...",
   "control_center.spaces_borders_position": "Spaces, Borders & Position",
   "control_center.taskbar_spaces": "Taskbar spaces",
   "control_center.window_spaces": "Window spaces",
@@ -1301,8 +1326,7 @@
   "control_center.restore_default": "Restore default",
   "control_center.keybindings_editor_navigation": "Tab select  Space toggle  Enter apply",
   "control_center.keybindings_editor_actions": "Esc cancel  Backspace disable  r restore",
-  "control_center.disabled": "Disabled"
-  ,"control_center.keybindings_press_key": "Press a new shortcut (Esc cancels)",
+  "control_center.keybindings_press_key": "Press a new shortcut (Esc cancels)",
   "control_center.keybindings_conflict": "That shortcut is already in use",
   "control_center.keybindings_conflict_title": "Shortcut conflict",
   "control_center.keybindings_used_by": "Currently used by:",
@@ -1316,30 +1340,30 @@
   "control_center.theme_profile_import_path": "Profile path (.tar.gz)",
   "control_center.theme_profile_invalid_archive": "Enter a valid .tar.gz profile path",
   "control_center.theme_profile_exported": "Theme profile exported",
-  "control_center.theme_profile_imported": "Theme profile imported"
-  ,"control_center.theme_profile_export_name": "Theme name"
-  ,"control_center.theme_profile_applied": "Custom theme applied"
-  ,"control_center.theme_profile_wallpaper_missing": "wallpaper was unavailable; using the official wallpaper"
-  ,"control_center.theme_profile_deleted": "Custom theme deleted"
-  ,"control_center.theme_profile_official": "Official Themes"
-  ,"control_center.theme_profile_custom": "Custom Themes"
-  ,"control_center.theme_profile_custom_empty": "No imported themes"
-  ,"control_center.theme_profile_export_import": "Export / Import"
-  ,"control_center.theme_profile_themes_help": "↑/↓ Navigate  Enter Apply / Open  d Delete  e Export  i Import  Esc Back"
-  ,"control_center.theme_profile_import_help": "↑/↓ Select archive  Enter Import  Esc Back"
-  ,"control_center.theme_profile_delete": "Delete"
-  ,"control_center.theme_profile_delete_title": "Delete theme?"
-  ,"control_center.theme_profile_delete_description": "The imported theme will be removed. Its wallpaper will be kept."
-  ,"control_center.theme_profile_delete_help": "↑/↓ Select  Enter Confirm  Esc Cancel"
-  ,"control_center.theme_profile_invalid_name": "Enter a theme name"
-  ,"control_center.theme_profile_output": "Output"
-  ,"control_center.theme_profile_importing": "Validating theme profile..."
-  ,"control_center.theme_profile_duplicate_title": "Theme already exists"
-  ,"control_center.theme_profile_duplicate_description": "Replace the existing imported theme?"
-  ,"control_center.theme_profile_duplicate_replace": "Replace"
-  ,"control_center.theme_profile_duplicate_help": "↑/↓ Select  Enter Confirm  Esc Cancel"
-  ,"control_center.unavailable_no_wifi_card": "Unavailable · no Wi-Fi card"
-  ,"control_center.signal": "Signal:"
-  ,"control_center.security": "Security:"
-  ,"control_center.frequency": "Frequency:"
+  "control_center.theme_profile_imported": "Theme profile imported",
+  "control_center.theme_profile_export_name": "Theme name",
+  "control_center.theme_profile_applied": "Custom theme applied",
+  "control_center.theme_profile_wallpaper_missing": "wallpaper was unavailable; using the official wallpaper",
+  "control_center.theme_profile_deleted": "Custom theme deleted",
+  "control_center.theme_profile_official": "Official Themes",
+  "control_center.theme_profile_custom": "Custom Themes",
+  "control_center.theme_profile_custom_empty": "No imported themes",
+  "control_center.theme_profile_export_import": "Export / Import",
+  "control_center.theme_profile_themes_help": "↑/↓ Navigate  Enter Apply / Open  d Delete  e Export  i Import  Esc Back",
+  "control_center.theme_profile_import_help": "↑/↓ Select archive  Enter Import  Esc Back",
+  "control_center.theme_profile_delete": "Delete",
+  "control_center.theme_profile_delete_title": "Delete theme?",
+  "control_center.theme_profile_delete_description": "The imported theme will be removed. Its wallpaper will be kept.",
+  "control_center.theme_profile_delete_help": "↑/↓ Select  Enter Confirm  Esc Cancel",
+  "control_center.theme_profile_invalid_name": "Enter a theme name",
+  "control_center.theme_profile_output": "Output",
+  "control_center.theme_profile_importing": "Validating theme profile...",
+  "control_center.theme_profile_duplicate_title": "Theme already exists",
+  "control_center.theme_profile_duplicate_description": "Replace the existing imported theme?",
+  "control_center.theme_profile_duplicate_replace": "Replace",
+  "control_center.theme_profile_duplicate_help": "↑/↓ Select  Enter Confirm  Esc Cancel",
+  "control_center.unavailable_no_wifi_card": "Unavailable · no Wi-Fi card",
+  "control_center.signal": "Signal:",
+  "control_center.frequency": "Frequency:",
+  "control_center.view_logs": "View Logs"
 }
