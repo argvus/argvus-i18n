@@ -1338,4 +1338,8 @@
   ,"control_center.theme_profile_duplicate_description": "Replace the existing imported theme?"
   ,"control_center.theme_profile_duplicate_replace": "Replace"
   ,"control_center.theme_profile_duplicate_help": "↑/↓ Select  Enter Confirm  Esc Cancel"
+  ,"control_center.unavailable_no_wifi_card": "Unavailable · no Wi-Fi card"
+  ,"control_center.signal": "Signal:"
+  ,"control_center.security": "Security:"
+  ,"control_center.frequency": "Frequency:"
 }

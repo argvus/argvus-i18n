@@ -1338,4 +1338,8 @@
   ,"control_center.theme_profile_duplicate_description": "Substituir o tema importado existente?"
   ,"control_center.theme_profile_duplicate_replace": "Substituir"
   ,"control_center.theme_profile_duplicate_help": "↑/↓ Selecionar  Enter Confirmar  Esc Cancelar"
+  ,"control_center.unavailable_no_wifi_card": "Indisponível · sem placa Wi-Fi"
+  ,"control_center.signal": "Sinal:"
+  ,"control_center.security": "Segurança:"
+  ,"control_center.frequency": "Frequência:"
 }
