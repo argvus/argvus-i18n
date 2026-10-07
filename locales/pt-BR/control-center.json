@@ -1395,5 +1395,19 @@
   "control_center.projects_remove": "Remover",
   "control_center.projects_remove_title": "Remover pasta",
   "control_center.projects_added": "Pasta adicionada",
-  "control_center.projects_removed": "Pasta removida"
+  "control_center.projects_removed": "Pasta removida",
+  "control_center.hyprland": "Hyprland",
+  "control_center.hyprland_description": "Atalhos, funcionalidades e aparência visual",
+  "control_center.hyprland_version": "Versão do Hyprland",
+  "control_center.borders": "Bordas",
+  "control_center.spaces": "Espaçamentos",
+  "control_center.inner": "Interno",
+  "control_center.outer": "Externo",
+  "control_center.settings": "Configurações",
+  "control_center.themes_and_visuals": "Temas e Visual",
+  "control_center.overview": "Visão geral",
+  "control_center.general": "Geral",
+  "control_center.taskbar_description": "Transparência, posição e relógio",
+  "control_center.control_panel_description": "Sessões, cartões e transparência",
+  "control_center.widget_telemetry_description": "Configurações do widget de monitoramento"
 }

@@ -1395,5 +1395,19 @@
   "control_center.projects_remove": "Remove",
   "control_center.projects_remove_title": "Remove folder",
   "control_center.projects_added": "Folder added",
-  "control_center.projects_removed": "Folder removed"
+  "control_center.projects_removed": "Folder removed",
+  "control_center.hyprland": "Hyprland",
+  "control_center.hyprland_description": "Shortcuts, features, and visual design",
+  "control_center.hyprland_version": "Hyprland version",
+  "control_center.borders": "Borders",
+  "control_center.spaces": "Spaces",
+  "control_center.inner": "Inner",
+  "control_center.outer": "Outer",
+  "control_center.settings": "Settings",
+  "control_center.themes_and_visuals": "Themes & Visuals",
+  "control_center.overview": "Overview",
+  "control_center.general": "General",
+  "control_center.taskbar_description": "Transparency, position and clock",
+  "control_center.control_panel_description": "Sessions, cards and transparency",
+  "control_center.widget_telemetry_description": "System monitor widget settings"
 }
