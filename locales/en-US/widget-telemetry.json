@@ -6,8 +6,15 @@
   "header.processes": "Processes »",
   "header.network": "Network »",
   "header.keys": "Shortcuts menu »",
+  "header.dev_dashboard": "Dev Dashboard »",
   "keys.format": "SUPER (Win) + Shift + /?",
   "label.type": "Type",
+  "label.project": "Project",
+  "label.branch": "Branch",
+  "label.dirty": "dirty",
+  "label.clean": "clean",
+  "label.ports": "Ports",
+  "label.containers": "Containers",
   "label.used": "Used",
   "label.percent": "Percent",
   "label.mount": "Mount",
@@ -45,5 +52,8 @@
   "gpu.temperature": "Temp",
   "gpu.name.amd": "AMD GPU",
   "gpu.unknown_driver": "Unknown",
-  "cli.usage": "Usage: {command} {options}"
+  "cli.usage": "Usage: {command} {options}",
+  "dev_dashboard.no_project": "No active project",
+  "dev_dashboard.not_git": "not a git repository",
+  "dev_dashboard.containers_unavailable": "not installed"
 }

@@ -6,8 +6,15 @@
   "header.processes": "Processos »",
   "header.network": "Rede »",
   "header.keys": "Menu de atalhos »",
+  "header.dev_dashboard": "Dev Dashboard »",
   "keys.format": "SUPER (Win) + Shift + /?",
   "label.type": "Tipo",
+  "label.project": "Projeto",
+  "label.branch": "Branch",
+  "label.dirty": "com alterações",
+  "label.clean": "limpo",
+  "label.ports": "Portas",
+  "label.containers": "Containers",
   "label.used": "Usado",
   "label.percent": "Porcentagem",
   "label.mount": "Montagem",
@@ -45,5 +52,8 @@
   "gpu.temperature": "Temp.",
   "gpu.name.amd": "GPU AMD",
   "gpu.unknown_driver": "Desconhecido",
-  "cli.usage": "Uso: {command} {options}"
+  "cli.usage": "Uso: {command} {options}",
+  "dev_dashboard.no_project": "Nenhum projeto ativo",
+  "dev_dashboard.not_git": "não é um repositório git",
+  "dev_dashboard.containers_unavailable": "não instalado"
 }
