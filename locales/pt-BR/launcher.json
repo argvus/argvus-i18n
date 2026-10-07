@@ -1,5 +1,12 @@
 {
   "search.application": "Pesquisar aplicação",
   "search.cheatsheet": "Procurar",
-  "error.config_value_required": "argvus-launcher: --config exige um valor"
+  "search.project": "Abrir projeto",
+  "error.no_projects": "argvus-projects: nenhum projeto encontrado nas raízes e caminhos configurados",
+  "error.usage": "uso: argvus-projects [add [--root] DIR | remove DIR | list]",
+  "error.not_directory": "argvus-projects: não é um diretório: {path}",
+  "message.added": "argvus-projects: adicionado {path}",
+  "message.removed": "argvus-projects: removido {path}",
+  "error.config_value_required": "argvus-launcher: --config exige um valor",
+  "error.project_not_found": "argvus-projects: nenhum projeto corresponde a \"{name}\""
 }
