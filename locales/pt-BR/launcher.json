@@ -8,5 +8,6 @@
   "message.added": "argvus-projects: adicionado {path}",
   "message.removed": "argvus-projects: removido {path}",
   "error.config_value_required": "argvus-launcher: --config exige um valor",
-  "error.project_not_found": "argvus-projects: nenhum projeto corresponde a \"{name}\""
+  "error.project_not_found": "argvus-projects: nenhum projeto corresponde a \"{name}\"",
+  "error.project_limit_reached": "argvus-projects: limite de projetos atingido ({limit}); remova um projeto antes de adicionar outro"
 }
