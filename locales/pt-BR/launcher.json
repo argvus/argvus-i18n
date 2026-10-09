@@ -18,5 +18,6 @@
   "error.snippet_not_found": "argvus-snippets: nenhum snippet corresponde a \"{name}\"",
   "message.snippet_added": "argvus-snippets: adicionado \"{name}\"",
   "message.ssh_session_ended": "ssh encerrou com status {status}. Pressione Enter para fechar.",
-  "message.snippet_removed": "argvus-snippets: removido \"{name}\""
+  "message.snippet_removed": "argvus-snippets: removido \"{name}\"",
+  "help.snippets": "argvus-snippets: digita um texto salvo na janela em foco.\n\nUso:\n  argvus-snippets                      abre o seletor (SUPER + ALT + N)\n  argvus-snippets add NOME CONTEUDO    adiciona um snippet, ou substitui o de mesmo nome\n  argvus-snippets remove NOME          remove um snippet\n  argvus-snippets list                 mostra o índice e o nome de cada snippet\n  argvus-snippets open NOME|INDICE     digita um snippet na janela em foco\n  argvus-snippets -h, --help           mostra esta ajuda\n\nExemplo:\n  argvus-snippets add \"email\" \"voce@example.com\"\n  argvus-snippets list\n  argvus-snippets open email\n\nOs snippets são digitados na posição do cursor, então foque um campo de texto primeiro."
 }
