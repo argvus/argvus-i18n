@@ -9,5 +9,14 @@
   "message.removed": "argvus-projects: removido {path}",
   "error.config_value_required": "argvus-launcher: --config exige um valor",
   "error.project_not_found": "argvus-projects: nenhum projeto corresponde a \"{name}\"",
-  "error.project_limit_reached": "argvus-projects: limite de projetos atingido ({limit}); remova um projeto antes de adicionar outro"
+  "error.project_limit_reached": "argvus-projects: limite de projetos atingido ({limit}); remova um projeto antes de adicionar outro",
+  "search.ssh": "Abrir host SSH",
+  "error.no_ssh_hosts": "argvus-ssh: nenhum host encontrado em ~/.ssh/config",
+  "error.ssh_host_not_found": "argvus-ssh: nenhum host corresponde a \"{name}\"",
+  "search.snippet": "Inserir snippet",
+  "error.no_snippets": "argvus-snippets: nenhum snippet configurado",
+  "error.snippet_not_found": "argvus-snippets: nenhum snippet corresponde a \"{name}\"",
+  "message.snippet_added": "argvus-snippets: adicionado \"{name}\"",
+  "message.ssh_session_ended": "ssh encerrou com status {status}. Pressione Enter para fechar.",
+  "message.snippet_removed": "argvus-snippets: removido \"{name}\""
 }
