@@ -23,5 +23,19 @@
   "help.snippets": "argvus snippets: digita um texto salvo na janela em foco.\n\nUso:\n  argvus snippets                      abre o seletor (SUPER + ALT + N)\n  argvus snippets add NOME CONTEUDO    adiciona um snippet, ou substitui o de mesmo nome\n  argvus snippets remove NOME          remove um snippet\n  argvus snippets list                 mostra o índice e o nome de cada snippet\n  argvus snippets open NOME|INDICE     digita um snippet na janela em foco\n  argvus snippets -h, --help           mostra esta ajuda\n\nExemplo:\n  argvus snippets add \"email\" \"voce@example.com\"\n  argvus snippets list\n  argvus snippets open email\n\nOs snippets são digitados na posição do cursor, então foque um campo de texto primeiro.",
   "help.git": "argvus-git: abre o lazygit (ou gitui) em um projeto escolhido.\n\nUso:\n  argvus git              escolhe um projeto e abre a TUI de git nele (SUPER + ALT + G)\n  argvus git DIR          abre a TUI de git em DIR\n  argvus git -h, --help   mostra esta ajuda\n\nExemplo:\n  argvus git\n  argvus git ~/Projects/api\n\nDefina ARGVUS_GIT_TUI=gitui para preferir o gitui ao lazygit.",
   "error.not_git_repository": "não é um repositório git: {path}",
-  "error.no_git_tui": "instale o lazygit ou o gitui para usar este atalho."
+  "error.no_git_tui": "instale o lazygit ou o gitui para usar este atalho.",
+  "help.keys": "argvus-keys: gerencia pares de chaves SSH e o ssh-agent.\n\nUso:\n  argvus keys                              mostra esta ajuda\n  argvus keys list                         lista os pares de chaves em ~/.ssh e se estão carregados\n  argvus keys generate NOME [--type ed25519|rsa] [--comment C] [--passphrase]\n                                           cria um par de chaves; --passphrase define uma senha em um terminal\n  argvus keys load NOME                    adiciona a chave ao agente (um terminal pede a senha)\n  argvus keys unload NOME                  remove a chave do agente\n  argvus keys unload-all                   remove todas as chaves do agente\n  argvus keys delete NOME                  apaga o par de chaves de ~/.ssh\n  argvus keys -h, --help                   mostra esta ajuda\n\nExemplo:\n  argvus keys generate trabalho --comment voce@example.com\n  argvus keys load trabalho\n\nAs chaves nunca são exibidas. As senhas são digitadas no terminal, nunca passadas como argumentos.",
+  "error.keys_usage": "uso: argvus keys [list | generate NOME [--type ed25519|rsa] [--comment C] [--passphrase] | load NOME | unload NOME | unload-all | delete NOME]",
+  "error.key_invalid_name": "argvus-keys: nome de chave inválido \"{name}\"; use letras, dígitos, ponto, hífen e sublinhado, sem ponto no início nem sufixo .pub",
+  "error.key_bad_type": "argvus-keys: tipo de chave não suportado \"{type}\" (use ed25519 ou rsa)",
+  "error.key_exists": "argvus-keys: já existe uma chave chamada \"{name}\"",
+  "error.key_not_found": "argvus-keys: nenhuma chave chamada \"{name}\"",
+  "error.key_no_public": "argvus-keys: \"{name}\" não tem arquivo de chave pública, então não pode ser identificada no agente",
+  "error.key_in_use": "argvus-keys: \"{name}\" está carregada no agente; descarregue-a antes",
+  "error.key_unreadable": "argvus-keys: não foi possível ler a chave pública de \"{name}\"",
+  "message.key_generated": "argvus-keys: \"{name}\" gerada",
+  "message.key_unloaded": "argvus-keys: \"{name}\" descarregada",
+  "message.key_deleted": "argvus-keys: \"{name}\" apagada",
+  "message.keys_unloaded_all": "argvus-keys: todas as chaves foram removidas do agente",
+  "message.keys_session_ended": "Pressione Enter para fechar."
 }

@@ -23,5 +23,19 @@
   "help.snippets": "argvus snippets: type saved text into the focused window.\n\nUsage:\n  argvus snippets                      open the picker (SUPER + ALT + N)\n  argvus snippets add NAME CONTENT     add a snippet, or replace the one with the same name\n  argvus snippets remove NAME          remove a snippet\n  argvus snippets list                 print the index and name of every snippet\n  argvus snippets open NAME|INDEX      type a snippet into the focused window\n  argvus snippets -h, --help           show this help\n\nExample:\n  argvus snippets add \"email\" \"you@example.com\"\n  argvus snippets list\n  argvus snippets open email\n\nSnippets are typed where the cursor is, so focus a text field first.",
   "help.git": "argvus-git: open lazygit (or gitui) in a project you pick.\n\nUsage:\n  argvus git              pick a project, then open the git TUI in it (SUPER + ALT + G)\n  argvus git DIR          open the git TUI in DIR\n  argvus git -h, --help   show this help\n\nExample:\n  argvus git\n  argvus git ~/Projects/api\n\nSet ARGVUS_GIT_TUI=gitui to prefer gitui over lazygit.",
   "error.not_git_repository": "not a git repository: {path}",
-  "error.no_git_tui": "install lazygit or gitui to use this shortcut."
+  "error.no_git_tui": "install lazygit or gitui to use this shortcut.",
+  "help.keys": "argvus-keys: manage SSH key pairs and the ssh-agent.\n\nUsage:\n  argvus keys                              show this help\n  argvus keys list                         list the key pairs in ~/.ssh and whether they are loaded\n  argvus keys generate NAME [--type ed25519|rsa] [--comment C] [--passphrase]\n                                           create a key pair; --passphrase sets one in a terminal\n  argvus keys load NAME                    add the key to the agent (a terminal asks for the passphrase)\n  argvus keys unload NAME                  remove the key from the agent\n  argvus keys unload-all                   remove every key from the agent\n  argvus keys delete NAME                  delete the key pair from ~/.ssh\n  argvus keys -h, --help                   show this help\n\nExample:\n  argvus keys generate work --comment you@example.com\n  argvus keys load work\n\nKeys are never printed. Passphrases are typed in the terminal, never passed as arguments.",
+  "error.keys_usage": "usage: argvus keys [list | generate NAME [--type ed25519|rsa] [--comment C] [--passphrase] | load NAME | unload NAME | unload-all | delete NAME]",
+  "error.key_invalid_name": "argvus-keys: invalid key name \"{name}\"; use letters, digits, dot, hyphen and underscore, without a leading dot or a .pub suffix",
+  "error.key_bad_type": "argvus-keys: unsupported key type \"{type}\" (use ed25519 or rsa)",
+  "error.key_exists": "argvus-keys: a key named \"{name}\" already exists",
+  "error.key_not_found": "argvus-keys: no key named \"{name}\"",
+  "error.key_no_public": "argvus-keys: \"{name}\" has no public key file, so it cannot be matched in the agent",
+  "error.key_in_use": "argvus-keys: \"{name}\" is loaded in the agent; unload it first",
+  "error.key_unreadable": "argvus-keys: cannot read the public key of \"{name}\"",
+  "message.key_generated": "argvus-keys: generated \"{name}\"",
+  "message.key_unloaded": "argvus-keys: unloaded \"{name}\"",
+  "message.key_deleted": "argvus-keys: deleted \"{name}\"",
+  "message.keys_unloaded_all": "argvus-keys: removed every key from the agent",
+  "message.keys_session_ended": "Press Enter to close."
 }
