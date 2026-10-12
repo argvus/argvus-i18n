@@ -28,7 +28,7 @@ check() {
 
 package_argvus-i18n() {
   cd "$(_source_dir)"
-  install -Dm755 target/release/argvus-i18n "$pkgdir/usr/bin/argvus-i18n"
+  install -Dm755 target/release/argvus-i18n "$pkgdir/usr/lib/argvus/commands/argvus-i18n"
   install -Dm644 src/usr/share/argvus/lib/i18n.sh "$pkgdir/usr/share/argvus/lib/i18n.sh"
   install -Dm644 src/usr/share/argvus/qml/argvus-i18n/I18n.qml "$pkgdir/usr/lib/qt6/qml/org/argvus/i18n/I18n.qml"
   install -Dm644 src/usr/share/argvus/qml/argvus-i18n/qmldir "$pkgdir/usr/lib/qt6/qml/org/argvus/i18n/qmldir"

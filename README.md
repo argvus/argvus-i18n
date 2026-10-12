@@ -14,7 +14,7 @@ make install
 ```
 
 `make build` runs the workspace checks and creates local packages in
-`build/dist/`. The package installs the CLI as `/usr/bin/argvus-i18n`,
+`build/dist/`. The package installs the CLI as `/usr/lib/argvus/commands/argvus-i18n`,
 catalogs under `/usr/share/argvus/i18n/`, and the Shell/QML integrations.
 
 ## Workspace
@@ -22,7 +22,7 @@ catalogs under `/usr/share/argvus/i18n/`, and the Shell/QML integrations.
 ```text
 crates/
   core/       locale detection, catalog loading, and translation APIs
-  main/       argvus-i18n CLI
+  main/       argvus i18n CLI
 locales/      en-US canonical catalogs and pt-BR translations
 packaging/
   arch/
