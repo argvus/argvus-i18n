@@ -4,31 +4,44 @@ use std::{
   collections::{BTreeSet, HashMap},
   env, fs,
   path::{Path, PathBuf},
+  sync::{Mutex, MutexGuard, OnceLock, PoisonError},
 };
 
 /// Compatibility handle for consumers that keep the selected translator in
-/// their application state. The locale and catalog loading remain entirely
-/// owned by [`I18n`].
+/// their application state. Catalogs are loaded once per root and locale and
+/// live for the rest of the process, which is what keeps the handle `Copy`.
 #[derive(Debug, Clone, Copy, PartialEq, Eq)]
 pub struct Lang(&'static I18n);
 
 impl Lang {
   pub fn detect() -> Self {
-    Self(Box::leak(Box::new(
-      I18n::new("control-center").expect("control-center i18n catalog is required"),
-    )))
+    static DETECTED: OnceLock<Lang> = OnceLock::new();
+    *DETECTED.get_or_init(|| {
+      Self(leak(
+        I18n::new("control-center").expect("control-center i18n catalog is required"),
+      ))
+    })
   }
 
   pub fn for_locale(locale: &str) -> Self {
-    let root = env::var_os("ARGVUS_I18N_DIR")
-      .map(PathBuf::from)
-      .unwrap_or_else(|| SYSTEM_CATALOG_DIR.into());
-    Self(Box::leak(Box::new(
+    static LOADED: OnceLock<Mutex<HashMap<(PathBuf, String), Lang>>> = OnceLock::new();
+    let root = catalog_root();
+    let key = (root.clone(), normalize_locale(locale));
+    let loaded = LOADED.get_or_init(Default::default);
+    if let Some(lang) = lock(loaded).get(&key) {
+      return *lang;
+    }
+    // Load outside the lock so concurrent callers never wait on file I/O.
+    let lang = Self(leak(
       I18n::from_locale(&root, locale, "control-center")
         .expect("control-center i18n catalog is required"),
-    )))
+    ));
+    *lock(loaded).entry(key).or_insert(lang)
   }
 
+  /// Deep-copies the loaded catalogs on every call. `Lang` is already `Copy`
+  /// and shares them, so callers should keep the `Lang` instead.
+  #[deprecated(note = "keep the `Lang` handle; it is `Copy` and shares the loaded catalogs")]
   pub fn translator(self) -> std::sync::Arc<I18n> {
     std::sync::Arc::new(self.0.clone())
   }
@@ -51,20 +64,47 @@ impl Lang {
   }
 }
 
+/// Borrowed translation for hot render paths: no allocation and no locking on
+/// a hit. Keys without a translation return the key itself, as [`I18n::tr`] does.
 pub fn tr(lang: Lang, key: &str) -> &'static str {
-  use std::sync::{OnceLock, RwLock};
-  static CACHE: OnceLock<RwLock<HashMap<(String, String), &'static str>>> = OnceLock::new();
-  let cache = CACHE.get_or_init(|| RwLock::new(HashMap::new()));
-  let cache_key = (lang.0.locale().to_owned(), key.to_owned());
-  if let Some(value) = cache.read().expect("i18n cache poisoned").get(&cache_key) {
+  match lang
+    .0
+    .translations
+    .get(key)
+    .or_else(|| lang.0.fallback.get(key))
+  {
+    Some(value) => value,
+    None => missing_key(key),
+  }
+}
+
+/// Missing keys are rare and bounded by the set of keys the code uses, so each
+/// one is leaked once and then served from this table.
+fn missing_key(key: &str) -> &'static str {
+  static MISSING: OnceLock<Mutex<HashMap<String, &'static str>>> = OnceLock::new();
+  let mut missing = lock(MISSING.get_or_init(Default::default));
+  if let Some(value) = missing.get(key) {
     return value;
   }
-  let value: &'static str = Box::leak(lang.0.tr(key).into_boxed_str());
-  cache
-    .write()
-    .expect("i18n cache poisoned")
-    .insert(cache_key, value);
+  let value: &'static str = Box::leak(Box::<str>::from(key));
+  missing.insert(key.to_owned(), value);
   value
+}
+
+fn leak(i18n: I18n) -> &'static I18n {
+  Box::leak(Box::new(i18n))
+}
+
+/// The caches hold plain maps with no invariant a panicking writer could
+/// break, so a poisoned lock is recovered rather than propagated.
+fn lock<T>(mutex: &Mutex<T>) -> MutexGuard<'_, T> {
+  mutex.lock().unwrap_or_else(PoisonError::into_inner)
+}
+
+fn catalog_root() -> PathBuf {
+  env::var_os("ARGVUS_I18N_DIR")
+    .map(PathBuf::from)
+    .unwrap_or_else(|| SYSTEM_CATALOG_DIR.into())
 }
 
 pub fn na(lang: Lang) -> &'static str {
@@ -113,10 +153,7 @@ impl std::error::Error for I18nError {}
 
 impl I18n {
   pub fn new(domain: &str) -> Result<Self, I18nError> {
-    let root = env::var_os("ARGVUS_I18N_DIR")
-      .map(PathBuf::from)
-      .unwrap_or_else(|| SYSTEM_CATALOG_DIR.into());
-    Self::from_root(&root, domain)
+    Self::from_root(&catalog_root(), domain)
   }
 
   pub fn from_root(root: &Path, domain: &str) -> Result<Self, I18nError> {

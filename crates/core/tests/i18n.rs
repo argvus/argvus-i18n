@@ -1,5 +1,5 @@
 use argvus_i18n::{
-  I18n, detect_locale_from, discover_locales, normalize_locale, validate_catalogs,
+  I18n, Lang, detect_locale_from, discover_locales, normalize_locale, tr, validate_catalogs,
 };
 use std::{
   fs,
@@ -356,6 +356,40 @@ fn explicit_xdg_config_path_is_used() {
       std::env::set_var("LC_ALL", value);
     } else {
       std::env::remove_var("LC_ALL");
+    }
+  }
+}
+
+#[test]
+fn borrowed_tr_matches_owned_translation_and_reuses_catalogs() {
+  let _guard = env_lock().lock().unwrap();
+  let root = root();
+  fs::write(
+    root.join("pt-BR/control-center.json"),
+    r#"{"save":"Salvar"}"#,
+  )
+  .unwrap();
+  fs::write(
+    root.join("en-US/control-center.json"),
+    r#"{"save":"Save","cancel":"Cancel"}"#,
+  )
+  .unwrap();
+  let old_root = std::env::var_os("ARGVUS_I18N_DIR");
+  unsafe {
+    std::env::set_var("ARGVUS_I18N_DIR", &root);
+  }
+
+  let pt = Lang::for_locale("pt-BR");
+  assert_eq!(pt, Lang::for_locale("pt_BR.UTF-8"));
+  assert_eq!(tr(pt, "save"), pt.tr("save"));
+  assert_eq!(tr(pt, "cancel"), "Cancel");
+  assert_eq!(tr(pt, "missing.key"), "missing.key");
+  assert!(std::ptr::eq(tr(pt, "missing.key"), tr(pt, "missing.key")));
+
+  unsafe {
+    match old_root {
+      Some(value) => std::env::set_var("ARGVUS_I18N_DIR", value),
+      None => std::env::remove_var("ARGVUS_I18N_DIR"),
     }
   }
 }
