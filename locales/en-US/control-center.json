@@ -1674,5 +1674,10 @@
   "control_center.users_groups": "Users & Groups",
   "control_center.developer_services": "Developer Services",
   "control_center.about_argvus": "About ARGVUS",
-  "control_center.style": "Style"
+  "control_center.style": "Style",
+  "control_center.themes": "Themes",
+  "control_center.taskbar_icons": "Taskbar icons",
+  "control_center.taskbar_date": "Taskbar date",
+  "control_center.taskbar_time": "Taskbar time",
+  "control_center.breadcrumb.root": "Control Center"
 }
