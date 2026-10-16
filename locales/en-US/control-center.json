@@ -866,6 +866,7 @@
   "control_center.sdr_brightness": "SDR brightness",
   "control_center.sdr_saturation": "SDR saturation",
   "control_center.search": "/             Search",
+  "control_center.search_field": "Search:",
   "control_center.search_2c43ee": "Search",
   "control_center.search_domains": "Search Domains:",
   "control_center.search_packages": "Search packages:",
